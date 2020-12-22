@@ -63,6 +63,7 @@ const StarRating = ({ size, children }: Props) => {
       }
       return node;
     },
+    inputmode: "none",
     style: screenReaderOnly,
     onChange: (event) => {
       if (event.target.value !== value) {
