@@ -59,7 +59,10 @@ const Star = ({
       onMouseOver={() => onHover()}
       onPointerMove={() => onHover()}
       onPointerOver={() => onHover()}
-      onMouseDown={() => setIsActive(true)}
+      onMouseDown={(event) => {
+        event.preventDefault();
+        setIsActive(true);
+      }}
       onMouseUp={() => {
         onChange();
         setIsActive(false);
