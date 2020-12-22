@@ -22,16 +22,6 @@ const Star = ({
   const [isActive, setIsActive] = useState(false);
   const [uniqId] = useState(() => Math.random());
 
-  const handleMouseUp = () => {
-    onChange();
-    setIsActive(false);
-  };
-
-  const handleTouchStart = () => {
-    onHover();
-    setIsActive(true);
-  };
-
   let fill;
   if (inKeyboardMode || isHighlighted || fillPercentage > 0) {
     fill = "#F3A536";
@@ -67,14 +57,36 @@ const Star = ({
       className="aaronshaf-star-rating-star"
       style={{ display: "inline-block" }}
       onMouseOver={() => onHover()}
+      onPointerMove={() => onHover()}
+      onPointerOver={() => onHover()}
       onMouseDown={() => setIsActive(true)}
-      onMouseUp={() => handleMouseUp()}
+      onMouseUp={() => {
+        onChange();
+        setIsActive(false);
+      }}
+      onPointerUp={() => {
+        onChange();
+        setIsActive(false);
+      }}
       onMouseLeave={() => {
+        setIsActive(false);
+      }}
+      onPointerCancel={() => {
+        setIsActive(false);
+      }}
+      onPointerLeave={() => {
         setIsActive(false);
       }}
       onTouchStart={() => {
         onHover();
-        handleTouchStart();
+        setIsActive(true);
+      }}
+      onTouchMove={() => {
+        onHover();
+      }}
+      onPointerDown={() => {
+        onHover();
+        setIsActive(true);
       }}
       onTouchEnd={() => {
         onChange();
