@@ -7,7 +7,7 @@
 ## Install
 
 ```bash
-npm install --save star-rating
+npm install --save @aaronshaf/star-rating
 ```
 
 ## Usage
