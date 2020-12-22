@@ -1,6 +1,6 @@
 {
   "name": "@aaronshaf/star-rating",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Star rating component. Upgrades input element.",
   "author": "aaronshaf",
   "license": "MIT",
