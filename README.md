@@ -14,7 +14,7 @@ npm install --save star-rating
 
 ```tsx
 import React, { Component } from "react";
-import StarRating from "star-rating";
+import StarRating from "@aaronshaf/star-rating";
 
 const Example = () => {
   return (

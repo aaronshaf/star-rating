@@ -24,7 +24,7 @@ const App = () => {
       <pre
         style={{ fontSize: "1.3rem" }}
       >{`import React, { Component } from "react";
-import StarRating from "star-rating";
+import StarRating from "@aaronshaf/star-rating";
 
 const Example = () => {
   return (
