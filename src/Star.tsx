@@ -57,8 +57,12 @@ const Star = ({
       className="aaronshaf-star-rating-star"
       style={{ display: "inline-block" }}
       onMouseOver={() => onHover()}
-      onPointerMove={() => onHover()}
-      onPointerOver={() => onHover()}
+      onPointerMove={() => {
+        onHover();
+      }}
+      onPointerOver={() => {
+        onHover();
+      }}
       onMouseDown={(event) => {
         event.preventDefault();
         setIsActive(true);
@@ -87,7 +91,8 @@ const Star = ({
       onTouchMove={() => {
         onHover();
       }}
-      onPointerDown={() => {
+      onPointerDown={(event) => {
+        event.preventDefault();
         onHover();
         setIsActive(true);
       }}
