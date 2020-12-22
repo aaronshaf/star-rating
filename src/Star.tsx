@@ -66,7 +66,6 @@ const Star = ({
     <div
       className="aaronshaf-star-rating-star"
       style={{ display: "inline-block" }}
-      onClick={() => null} // onChange()
       onMouseOver={() => onHover()}
       onMouseDown={() => setIsActive(true)}
       onMouseUp={() => handleMouseUp()}

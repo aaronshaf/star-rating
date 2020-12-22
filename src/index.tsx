@@ -6,7 +6,7 @@ interface Props {
   children: JSX.IntrinsicElements["input"];
 }
 
-const screenReaderOnly = {
+const screenReaderOnly: Partial<CSSStyleDeclaration> = {
   position: "absolute",
   width: "1px",
   height: "1px",
@@ -28,8 +28,7 @@ export const useIsMounted = () => {
 
 export const StarRating = ({ size, children }: Props) => {
   const isMount = useIsMounted();
-  const child = React.Children.only(children);
-  console.debug({ child });
+  const child: any = React.Children.only(children);
   const inputRef = useRef<HTMLInputElement | null>(null);
   const [value, setValue] = useState(child.props.value);
   const [hoverIndex, setHoverIndex] = useState(child.props.value);
