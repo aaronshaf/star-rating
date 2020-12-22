@@ -13,16 +13,23 @@ npm install --save star-rating
 ## Usage
 
 ```tsx
-import React, { Component } from 'react'
+import React, { Component } from "react";
+import StarRating from "star-rating";
 
-import MyComponent from 'star-rating'
-import 'star-rating/dist/index.css'
-
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
-}
+const Example = () => {
+  return (
+    <StarRating size="2rem">
+      <input
+        type="number"
+        onChange={handleChange}
+        min="1"
+        max="5"
+        step="1"
+        value="0"
+      />
+    </StarRating>
+  );
+};
 ```
 
 ## License

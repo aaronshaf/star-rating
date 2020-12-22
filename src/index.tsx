@@ -18,7 +18,7 @@ const screenReaderOnly: Partial<CSSStyleDeclaration> = {
   borderWidth: "0",
 };
 
-export const useIsMounted = () => {
+const useIsMounted = () => {
   const isMountRef = useRef(true);
   useEffect(() => {
     isMountRef.current = false;
@@ -26,7 +26,7 @@ export const useIsMounted = () => {
   return isMountRef.current;
 };
 
-export const StarRating = ({ size, children }: Props) => {
+const StarRating = ({ size, children }: Props) => {
   const isMount = useIsMounted();
   const child: any = React.Children.only(children);
   const inputRef = useRef<HTMLInputElement | null>(null);
@@ -150,3 +150,5 @@ export const StarRating = ({ size, children }: Props) => {
     </div>
   );
 };
+
+export default StarRating;
