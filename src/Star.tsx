@@ -55,7 +55,7 @@ const Star = ({
   return (
     <div
       className="aaronshaf-star-rating-star"
-      style={{ display: "inline-block" }}
+      style={{ display: "inline-block", touchAction: "none" }}
       onMouseOver={() => onHover()}
       onPointerMove={() => {
         onHover();
